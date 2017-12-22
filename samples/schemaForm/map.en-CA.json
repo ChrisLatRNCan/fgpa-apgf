@@ -202,8 +202,8 @@
                       ],
                       "additionalProperties": false
                     },
-                    "description": "Level of details for a specific tile schema",
-                    "title": "Level of details sets",
+                    "description": "Level of detail for a specific tile schema",
+                    "title": "Level of detail sets",
                     "default": "[]"
                   }
                 },
@@ -212,11 +212,11 @@
                   "lods"
                 ],
                 "additionalProperties": false,
-                "title": "Level of details sets",
+                "title": "Level of detail sets",
                 "default": ""
               },
               "description": "The levels of detail (zoom scales) available for the map",
-              "title": "Level of details sets",
+              "title": "Level of detail sets",
               "default": "[]"
         },
         "tileSchemas": {
@@ -244,7 +244,7 @@
                   },
                   "lodSetId": {
                     "type": "string",
-                    "description": "Optional.  The level of details set to be used for this basemap (should reference map.lod.id)",
+                    "description": "Optional.  The Level of detail set to be used for this basemap (should reference map.lod.id)",
                     "title": "LODs ID",
                     "default": ""
                   },

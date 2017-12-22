@@ -7,35 +7,35 @@
     "proxyUrl": {
       "type": "string",
       "description": "An optional proxy to be used for dealing with same-origin issues.  URL must either be a relative path on the same server or an absolute path on a server which sets CORS headers.",
-      "title": "Proxy URL",
+      "title": "URL du proxy",
       "help": "",
       "default": ""
     },
     "exportMapUrl": {
       "type": "string",
       "description": "An ESRI service endpoint for generating map images.  Should point directly to an endpoint that can be consumed by ESRI PrintTask.",
-      "title": "Export Map URL",
+      "title": "URL de la carte à exporter",
       "help": "",
       "default": ""
     },
     "geometryUrl": {
       "type": "string",
       "description": "A URL to an ESRI ArcGIS geometry service REST endpoint.",
-      "title": "Geometry URL",
+      "title": "URL de la géométrie",
       "help": "",
       "default": ""
     },
     "googleAPIKey": {
       "type": "string",
       "description": "Google API key to enable geo location and share link shortening.",
-      "title": "Google API URL",
+      "title": "URL de l'API Google",
       "help": "Do we really need this?",
       "default": ""
     },
     "geolocation": {
       "type": "object",
       "description": "FIXME",
-      "title": "Geolocation API URL",
+      "title": "URL de l'API de géolocalisation",
       "help": "",
       "default": ""
     },
@@ -43,7 +43,7 @@
       "type": "object",
       "additionalProperties": false,
       "description": "FIXME",
-      "title": "Coordinates Info URL",
+      "title": "URL pour les coordonnées",
       "help": "",
       "default": ""
     },
@@ -51,7 +51,7 @@
       "type": "object",
       "additionalProperties": false,
       "description": "FIXME",
-      "title": "Print URL",
+      "title": "URL pour l'impression",
       "help": "hummmmm sert a quoi",
       "default": ""
     },

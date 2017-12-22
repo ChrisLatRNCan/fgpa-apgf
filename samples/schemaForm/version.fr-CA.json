@@ -11,7 +11,7 @@
                 "2.0"
             ],
             "default": "2.0",
-            "description": "La version du schema utilisé pour valider le fichier de configuration."
+            "description": "La version du schéma utilisé pour valider le fichier de configuration."
         }
     }
 }
