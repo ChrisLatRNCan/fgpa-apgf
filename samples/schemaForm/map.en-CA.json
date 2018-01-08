@@ -16,36 +16,39 @@
               },
               "spatialReference": {
                 "description": "The projection for the given extents",
-                "title": "",
+                "title": "Spatial reference",
                 "default": "",
                 "type": "object",
                 "properties": {
                   "wkid": {
-                    "type": "number",
-                    "title": "",
-                    "default": ""
+                      "type": "number",
+                      "title": "WKID",
+                      "description": "Well-Known ID ( WKID )",
+                      "default": ""
                   },
                   "vcsWkid": {
-                    "type": "number",
-                    "title": "",
-                    "default": ""
+                      "type": "number",
+                      "title": "VcsWKID",
+                      "description": "Vertical coordinate system WKID",
+                      "default": ""
                   },
                   "latestWkid": {
-                    "type": "number",
-                    "title": "",
-                    "default": ""
+                      "type": "number",
+                      "title": "Latest WKID",
+                      "default": ""
                   },
                   "latestVcsWkid": {
-                    "type": "number",
-                    "title": "",
-                    "default": ""
+                      "type": "number",
+                      "title": "Latest VcsWKID",
+                      "default": ""
                   },
                   "wkt": {
-                    "type": "string",
-                    "title": "",
-                    "default": ""
+                      "type": "string",
+                      "title": "WKT",
+                      "description": "Well-Known Text",
+                      "default": ""
                   }
-                },
+              },
                 "additionalProperties": false
               },
               "default": {
@@ -262,7 +265,8 @@
                           "url": {
                               "type": "string",
                               "description": "The service endpoint of the layer. It should match the type provided in layerType.",
-                              "default": ""
+                              "default": "",
+                              "title": "URL"
                           }
                       }
                   }
@@ -297,12 +301,14 @@
                             "properties": {
                                 "wkid": {
                                     "type": "number",
-                                    "title": "Well-Known ID",
+                                    "title": "WKID",
+                                    "description": "Well-Known ID ( WKID )",
                                     "default": ""
                                 },
                                 "vcsWkid": {
                                     "type": "number",
-                                    "title": "Vertical coordinate system WKID",
+                                    "title": "VcsWKID",
+                                    "description": "Vertical coordinate system WKID",
                                     "default": ""
                                 },
                                 "latestWkid": {
@@ -317,7 +323,8 @@
                                 },
                                 "wkt": {
                                     "type": "string",
-                                    "title": "Well-Known Text",
+                                    "title": "WKT",
+                                    "description": "Well-Known Text",
                                     "default": ""
                                 }
                             },
@@ -399,7 +406,7 @@
                   },
                   "description": {
                     "type": "string",
-                    "description": "Description of the basemap. Will be visible when basemap selector is expanded.Description of the basemap. Will be visible when basemap selector is expanded.",
+                    "description": "Description of the basemap. Will be visible when basemap selector is expanded.",
                     "title": "Description",
                     "default": ""
                   },
@@ -411,7 +418,7 @@
                   },
                   "altText": {
                     "type": "string",
-                    "description": "Alt text for the basemap thumbnail image.Alt text for the basemap thumbnail image.",
+                    "description": "Alt text for the basemap thumbnail image.",
                     "title": "Alternate Text",
                     "default": ""
                   },

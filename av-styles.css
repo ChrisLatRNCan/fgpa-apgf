@@ -28658,6 +28658,22 @@ This should make it easy to update my third-party stylesheets to more current ve
   cursor: pointer;
 }
 
+.fgpa .av-state-highlight {
+  background-color: #FFFF99;
+  height: 10em;
+  margin: 0.5em 1em 0.5em 1em;
+  list-style-type: none;
+}
+
+.fgpa .list-group-item > div {
+  display: flex;
+}
+
+.fgpa .av-drag-handle {
+  padding-top: 1px;
+  cursor: move;
+}
+
 .fgpa .av-loading-screen {
   overflow-x: hidden;
   position: absolute;
