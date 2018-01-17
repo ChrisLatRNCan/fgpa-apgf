@@ -163,11 +163,11 @@
               "spatialReference"
             ],
             "additionalProperties": false,
-            "title": "Spatial extent sets",
+            "title": "Spatial extents set",
             "default": ""
           },
           "description": "The default, full and maximum extents of the map",
-          "title": "Extent sets",
+          "title": "Spatial Extents sets",
           "default": ""
         },
         "lodSets": {
@@ -206,7 +206,7 @@
                       "additionalProperties": false
                     },
                     "description": "Level of detail for a specific tile schema",
-                    "title": "Level of detail sets",
+                    "title": "Level of Detail set",
                     "default": "[]"
                   }
                 },
@@ -215,7 +215,7 @@
                   "lods"
                 ],
                 "additionalProperties": false,
-                "title": "Level of detail sets",
+                "title": "Level of Detail sets",
                 "default": ""
               },
               "description": "The levels of detail (zoom scales) available for the map",
@@ -282,7 +282,7 @@
             },
             "minItems": 1,
             "description": "A unique combination of an LoD and an extent set (each basemap must fit into a tile schema)",
-            "title": "Tile schemas"
+            "title": "Tile Schemas"
         },
         "components": {
             "type": "object",
@@ -297,6 +297,7 @@
                         },
                         "spatialReference": {
                             "title": "Spatial reference",
+                            "description": "The projection for the given extents",
                             "type": "object",
                             "properties": {
                                 "wkid": {
@@ -436,6 +437,7 @@
                   },
                   "layers": {
                     "type": "array",
+                    "title": "Layers",
                     "items": {
                       "type": "object",
                       "properties": {
@@ -463,8 +465,7 @@
                       ]
                     },
                     "minItems": 1,
-                    "description": "A set of URLs which should be composited to form a basemap entry",
-                    "title": "Layers"
+                    "description": "A set of URLs which should be composited to form a basemap entry"
                   },
                   "attribution": {
                     "title": "Attribution",
@@ -542,8 +543,8 @@
               "title": "Basemaps Collection"
         },
         "layers": {
-            "description": "",
-            "title": "Layers",
+            "description": "A list of layers to be added to the viewer.",
+            "title": "Layers Collection",
             "type": "array",
             "items": {
                 "type": "object",
@@ -832,7 +833,7 @@
                     },
                     "layerEntries": {
                         "type": "array",
-                        "title": "Layer entries",
+                        "title": "Layer Entries",
                         "default": [],
                         "items": {
                             "type": "object",

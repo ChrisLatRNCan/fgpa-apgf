@@ -158,7 +158,7 @@
             "value": {
               "type": "string",
               "description": "Valeur par défaut",
-              "title": "",
+              "title": "Valeur",
               "help": "",
               "default": ""
             }
@@ -188,13 +188,13 @@
             "value": {
               "type": "string",
               "description": "services.export.footnote.value.description",
-              "title": "",
+              "title": "Valeur",
               "help": "",
               "default": ""
             }
           },
           "additionalProperties": false,
-          "title": "Map",
+          "title": "Carte",
           "help": ""
         },
         "mapElements": {

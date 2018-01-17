@@ -145,20 +145,20 @@
               "type": "boolean",
               "default": true,
               "description": "",
-              "title": "is present",
+              "title": "Is present",
               "help": ""
             },
             "isSelectable": {
               "type": "boolean",
               "default": true,
               "description": "",
-              "title": "is customizable",
+              "title": "Is customizable",
               "help": ""
             },
             "value": {
               "type": "string",
               "description": "Value to appear by default",
-              "title": "Default value",
+              "title": "Value",
               "help": "",
               "default": ""
             }
@@ -175,20 +175,20 @@
                 "type": "boolean",
                 "default": true,
                 "description": "",
-                "title": "is present",
+                "title": "Is present",
                 "help": ""
               },
               "isSelectable": {
                 "type": "boolean",
                 "default": true,
                 "description": "",
-                "title": "is customizable",
+                "title": "Is customizable",
                 "help": ""
               },
             "value": {
               "type": "string",
               "description": "services.export.footnote.value.description",
-              "title": "",
+              "title": "Value",
               "help": "",
               "default": ""
             }
@@ -205,20 +205,20 @@
                 "type": "boolean",
                 "default": true,
                 "description": "",
-                "title": "is present",
+                "title": "Is present",
                 "help": ""
               },
               "isSelectable": {
                 "type": "boolean",
                 "default": true,
                 "description": "",
-                "title": "is customizable",
+                "title": "Is customizable",
                 "help": ""
               },
             "value": {
               "type": "string",
               "description": "services.export.footnote.value.description",
-              "title": "",
+              "title": "Value",
               "help": "",
               "default": ""
             }
@@ -235,14 +235,14 @@
                 "type": "boolean",
                 "default": true,
                 "description": "",
-                "title": "is present",
+                "title": "Is present",
                 "help": ""
               },
               "isSelectable": {
                 "type": "boolean",
                 "default": true,
                 "description": "",
-                "title": "is customizable",
+                "title": "Is customizable",
                 "help": ""
               },
             "value": {
@@ -279,14 +279,14 @@
                 "type": "boolean",
                 "default": true,
                 "description": "",
-                "title": "is present",
+                "title": "Is present",
                 "help": ""
               },
               "isSelectable": {
                 "type": "boolean",
                 "default": true,
                 "description": "",
-                "title": "is customizable",
+                "title": "Is customizable",
                 "help": ""
               },
             "value": {
@@ -309,14 +309,14 @@
                 "type": "boolean",
                 "default": true,
                 "description": "",
-                "title": "is present",
+                "title": "Is present",
                 "help": ""
               },
               "isSelectable": {
                 "type": "boolean",
                 "default": true,
                 "description": "",
-                "title": "is customizable",
+                "title": "Is customizable",
                 "help": ""
               },
             "value": {

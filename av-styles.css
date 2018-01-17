@@ -7116,6 +7116,8 @@ button.close {
     display: none !important;
   }
 }
+@charset "UTF-8";
+
 html,
 body {
   height: 100%;
@@ -7767,63 +7769,6 @@ md-autocomplete .md-show-clear-button button.ng-leave.ng-leave-active {
   }
 }
 
-md-backdrop {
-  transition: opacity 450ms;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-}
-
-md-backdrop.md-menu-backdrop {
-  position: fixed !important;
-  z-index: 99;
-}
-
-md-backdrop.md-select-backdrop {
-  z-index: 81;
-  transition-duration: 0;
-}
-
-md-backdrop.md-dialog-backdrop {
-  z-index: 79;
-}
-
-md-backdrop.md-bottom-sheet-backdrop {
-  z-index: 69;
-}
-
-md-backdrop.md-sidenav-backdrop {
-  z-index: 59;
-}
-
-md-backdrop.md-click-catcher {
-  position: absolute;
-}
-
-md-backdrop.md-opaque {
-  opacity: .48;
-}
-
-md-backdrop.md-opaque.ng-enter {
-  opacity: 0;
-}
-
-md-backdrop.md-opaque.ng-enter.md-opaque.ng-enter-active {
-  opacity: .48;
-}
-
-md-backdrop.md-opaque.ng-leave {
-  opacity: .48;
-  transition: opacity 400ms;
-}
-
-md-backdrop.md-opaque.ng-leave.md-opaque.ng-leave-active {
-  opacity: 0;
-}
-
 md-bottom-sheet {
   position: absolute;
   left: 0;
@@ -7984,6 +7929,63 @@ md-bottom-sheet.md-grid md-list-item .md-grid-text {
   md-bottom-sheet {
     border: 1px solid #fff;
   }
+}
+
+md-backdrop {
+  transition: opacity 450ms;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 50;
+}
+
+md-backdrop.md-menu-backdrop {
+  position: fixed !important;
+  z-index: 99;
+}
+
+md-backdrop.md-select-backdrop {
+  z-index: 81;
+  transition-duration: 0;
+}
+
+md-backdrop.md-dialog-backdrop {
+  z-index: 79;
+}
+
+md-backdrop.md-bottom-sheet-backdrop {
+  z-index: 69;
+}
+
+md-backdrop.md-sidenav-backdrop {
+  z-index: 59;
+}
+
+md-backdrop.md-click-catcher {
+  position: absolute;
+}
+
+md-backdrop.md-opaque {
+  opacity: .48;
+}
+
+md-backdrop.md-opaque.ng-enter {
+  opacity: 0;
+}
+
+md-backdrop.md-opaque.ng-enter.md-opaque.ng-enter-active {
+  opacity: .48;
+}
+
+md-backdrop.md-opaque.ng-leave {
+  opacity: .48;
+  transition: opacity 400ms;
+}
+
+md-backdrop.md-opaque.ng-leave.md-opaque.ng-leave-active {
+  opacity: 0;
 }
 
 button.md-button::-moz-focus-inner {
@@ -8486,6 +8488,182 @@ md-card md-card-footer {
   height: auto;
 }
 
+.md-inline-form md-checkbox {
+  margin: 19px 0 18px;
+}
+
+md-checkbox {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-bottom: 16px;
+  white-space: nowrap;
+  cursor: pointer;
+  outline: none;
+  user-select: none;
+  position: relative;
+  min-width: 20px;
+  min-height: 20px;
+  margin-left: 0;
+  margin-right: 16px;
+}
+
+[dir=rtl] md-checkbox {
+  margin-left: 16px;
+}
+
+[dir=rtl] md-checkbox {
+  margin-right: 0;
+}
+
+md-checkbox:last-of-type {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+md-checkbox.md-focused:not([disabled]) .md-container:before {
+  left: -8px;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+}
+
+md-checkbox.md-focused:not([disabled]):not(.md-checked) .md-container:before {
+  background-color: rgba(0, 0, 0, 0.12);
+}
+
+md-checkbox.md-align-top-left > div.md-container {
+  top: 12px;
+}
+
+md-checkbox .md-container {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  box-sizing: border-box;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  right: auto;
+}
+
+[dir=rtl] md-checkbox .md-container {
+  left: auto;
+}
+
+[dir=rtl] md-checkbox .md-container {
+  right: 0;
+}
+
+md-checkbox .md-container:before {
+  box-sizing: border-box;
+  background-color: transparent;
+  border-radius: 50%;
+  content: '';
+  position: absolute;
+  display: block;
+  height: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 0.5s;
+  width: auto;
+}
+
+md-checkbox .md-container:after {
+  box-sizing: border-box;
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+}
+
+md-checkbox .md-container .md-ripple-container {
+  position: absolute;
+  display: block;
+  width: auto;
+  height: auto;
+  left: -15px;
+  top: -15px;
+  right: -15px;
+  bottom: -15px;
+}
+
+md-checkbox .md-icon {
+  box-sizing: border-box;
+  transition: 240ms;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+  border-style: solid;
+  border-radius: 2px;
+}
+
+md-checkbox.md-checked .md-icon {
+  border-color: transparent;
+}
+
+md-checkbox.md-checked .md-icon:after {
+  box-sizing: border-box;
+  transform: rotate(45deg);
+  position: absolute;
+  left: 4.66667px;
+  top: 0.22222px;
+  display: table;
+  width: 6.66667px;
+  height: 13.33333px;
+  border-width: 2px;
+  border-style: solid;
+  border-top: 0;
+  border-left: 0;
+  content: '';
+}
+
+md-checkbox[disabled] {
+  cursor: default;
+}
+
+md-checkbox.md-indeterminate .md-icon:after {
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: table;
+  width: 12px;
+  height: 2px;
+  border-width: 2px;
+  border-style: solid;
+  border-top: 0;
+  border-left: 0;
+  content: '';
+}
+
+md-checkbox .md-label {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  white-space: normal;
+  user-select: text;
+  margin-left: 30px;
+  margin-right: 0;
+}
+
+[dir=rtl] md-checkbox .md-label {
+  margin-left: 0;
+}
+
+[dir=rtl] md-checkbox .md-label {
+  margin-right: 30px;
+}
+
 .md-contact-chips .md-chips md-chip {
   padding: 0 25px 0 0;
 }
@@ -8779,182 +8957,6 @@ md-card md-card-footer {
   }
 }
 
-.md-inline-form md-checkbox {
-  margin: 19px 0 18px;
-}
-
-md-checkbox {
-  box-sizing: border-box;
-  display: inline-block;
-  margin-bottom: 16px;
-  white-space: nowrap;
-  cursor: pointer;
-  outline: none;
-  user-select: none;
-  position: relative;
-  min-width: 20px;
-  min-height: 20px;
-  margin-left: 0;
-  margin-right: 16px;
-}
-
-[dir=rtl] md-checkbox {
-  margin-left: 16px;
-}
-
-[dir=rtl] md-checkbox {
-  margin-right: 0;
-}
-
-md-checkbox:last-of-type {
-  margin-left: 0;
-  margin-right: 0;
-}
-
-md-checkbox.md-focused:not([disabled]) .md-container:before {
-  left: -8px;
-  top: -8px;
-  right: -8px;
-  bottom: -8px;
-}
-
-md-checkbox.md-focused:not([disabled]):not(.md-checked) .md-container:before {
-  background-color: rgba(0, 0, 0, 0.12);
-}
-
-md-checkbox.md-align-top-left > div.md-container {
-  top: 12px;
-}
-
-md-checkbox .md-container {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  box-sizing: border-box;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  left: 0;
-  right: auto;
-}
-
-[dir=rtl] md-checkbox .md-container {
-  left: auto;
-}
-
-[dir=rtl] md-checkbox .md-container {
-  right: 0;
-}
-
-md-checkbox .md-container:before {
-  box-sizing: border-box;
-  background-color: transparent;
-  border-radius: 50%;
-  content: '';
-  position: absolute;
-  display: block;
-  height: auto;
-  left: 0;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  transition: all 0.5s;
-  width: auto;
-}
-
-md-checkbox .md-container:after {
-  box-sizing: border-box;
-  content: '';
-  position: absolute;
-  top: -10px;
-  right: -10px;
-  bottom: -10px;
-  left: -10px;
-}
-
-md-checkbox .md-container .md-ripple-container {
-  position: absolute;
-  display: block;
-  width: auto;
-  height: auto;
-  left: -15px;
-  top: -15px;
-  right: -15px;
-  bottom: -15px;
-}
-
-md-checkbox .md-icon {
-  box-sizing: border-box;
-  transition: 240ms;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  border-width: 2px;
-  border-style: solid;
-  border-radius: 2px;
-}
-
-md-checkbox.md-checked .md-icon {
-  border-color: transparent;
-}
-
-md-checkbox.md-checked .md-icon:after {
-  box-sizing: border-box;
-  transform: rotate(45deg);
-  position: absolute;
-  left: 4.66667px;
-  top: 0.22222px;
-  display: table;
-  width: 6.66667px;
-  height: 13.33333px;
-  border-width: 2px;
-  border-style: solid;
-  border-top: 0;
-  border-left: 0;
-  content: '';
-}
-
-md-checkbox[disabled] {
-  cursor: default;
-}
-
-md-checkbox.md-indeterminate .md-icon:after {
-  box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: table;
-  width: 12px;
-  height: 2px;
-  border-width: 2px;
-  border-style: solid;
-  border-top: 0;
-  border-left: 0;
-  content: '';
-}
-
-md-checkbox .md-label {
-  box-sizing: border-box;
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  white-space: normal;
-  user-select: text;
-  margin-left: 30px;
-  margin-right: 0;
-}
-
-[dir=rtl] md-checkbox .md-label {
-  margin-left: 0;
-}
-
-[dir=rtl] md-checkbox .md-label {
-  margin-right: 30px;
-}
-
 md-content {
   display: block;
   position: relative;
@@ -9066,7 +9068,7 @@ md-calendar {
   padding: 0 24px 0 0;
 }
 
-md-calendar-month .md-calendar-month-label:not(.md-calendar-month-label-disabled) {
+.md-calendar-month-label.md-calendar-label-clickable {
   cursor: pointer;
 }
 
@@ -9865,28 +9867,6 @@ md-fab-toolbar.md-is-open .md-fab-action-item {
   transform: scale(1);
 }
 
-md-icon {
-  margin: auto;
-  background-repeat: no-repeat no-repeat;
-  display: inline-block;
-  vertical-align: middle;
-  fill: currentColor;
-  height: 24px;
-  width: 24px;
-  min-height: 24px;
-  min-width: 24px;
-}
-
-md-icon svg {
-  pointer-events: none;
-  display: block;
-}
-
-md-icon[md-font-icon] {
-  line-height: 24px;
-  width: auto;
-}
-
 md-grid-list {
   box-sizing: border-box;
   display: block;
@@ -9967,6 +9947,28 @@ md-grid-list md-grid-tile md-grid-tile-footer {
   md-grid-tile-footer {
     border-top: 1px solid #fff;
   }
+}
+
+md-icon {
+  margin: auto;
+  background-repeat: no-repeat no-repeat;
+  display: inline-block;
+  vertical-align: middle;
+  fill: currentColor;
+  height: 24px;
+  width: 24px;
+  min-height: 24px;
+  min-width: 24px;
+}
+
+md-icon svg {
+  pointer-events: none;
+  display: block;
+}
+
+md-icon[md-font-icon] {
+  line-height: 24px;
+  width: auto;
 }
 
 md-input-container {
@@ -12944,16 +12946,6 @@ md-slider-container md-input-container input[type="number"] {
   position: relative;
 }
 
-[md-swipe-left],
-[md-swipe-right] {
-  touch-action: pan-y;
-}
-
-[md-swipe-up],
-[md-swipe-down] {
-  touch-action: pan-x;
-}
-
 .md-inline-form md-switch {
   margin-top: 18px;
   margin-bottom: 19px;
@@ -13136,6 +13128,16 @@ md-switch:not(.md-dragging) .md-thumb {
   md-switch.md-default-theme .md-thumb {
     background-color: #fff;
   }
+}
+
+[md-swipe-left],
+[md-swipe-right] {
+  touch-action: pan-y;
+}
+
+[md-swipe-up],
+[md-swipe-down] {
+  touch-action: pan-x;
 }
 
 @keyframes md-tab-content-hide {
@@ -13919,6 +13921,20 @@ md-toolbar ~ md-content > md-list md-list-item:last-child md-divider {
   }
 }
 
+.md-truncate {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.md-truncate.md-clip {
+  text-overflow: clip;
+}
+
+.md-truncate.flex {
+  width: 0;
+}
+
 .md-tooltip {
   pointer-events: none;
   border-radius: 4px;
@@ -13996,20 +14012,6 @@ md-toolbar ~ md-content > md-list md-list-item:last-child md-divider {
   transition-duration: 150ms;
   transform: scale(0);
   opacity: 0;
-}
-
-.md-truncate {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-
-.md-truncate.md-clip {
-  text-overflow: clip;
-}
-
-.md-truncate.flex {
-  width: 0;
 }
 
 .md-virtual-repeat-container {
@@ -27897,6 +27899,29 @@ Things like mixin declarations, functions, and variables. */
   /* The vendor directory is for overriding third-party CSS. This is handy when using prepackaged components developed by other people.
 jQuery UI and a color picker override styles are examples of CSS that you might want to place in the vendor directory.
 This should make it easy to update my third-party stylesheets to more current versions in the future. */
+  /* Also from CSS Wizardry (http://csswizardry.com/2013/04/shame-css/), a _shame file is something we've been trying out only recently. This file is a place where you put all the code you're not proud of, with the intention of A) isolating it and B) fixing it later. The goal is for this file to be empty, but some times you just have to throw that hack in there to get it working. */
+  /*
+### The rules
+
+Obviously you need some kind of rules and criteria:
+
+1. If it’s a hack, it goes in shame.css.
+2. Document all hacks fully:
+    1. What part of the codebase does it relate to?
+    2. Why was this needed?
+    3. How does this fix it?
+    4. How might you fix it properly, given more time?
+3. Do not blame the developer; if they explained why they had to do it then their reasons are probably (hopefully) valid.
+4. Try and clean shame.css up when you have some down time.
+    1. Even better, get a tech-debt story in which you can dedicate actual sprint time to it.
+*/
+  /*
+We need a specific hack for IE and Edge for css icon (drag handle and expand/collapse arrow)
+Without this, the icon is not well place on the page. To fix this we we have to write css to override some Bootstrap css
+The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
+*/
+  /* IE10 & IE11 CSS styles go here */
+  /* Microsoft EdgeV13&14 CSS styles go here */
 }
 
 .fgpa h1,
@@ -27959,13 +27984,15 @@ This should make it easy to update my third-party stylesheets to more current ve
 }
 
 .fgpa .av-save-dialog md-input-container input,
-.fgpa .av-preview-dialog md-input-container input {
+.fgpa .av-preview-dialog md-input-container input,
+.fgpa .av-extent-dialog md-input-container input {
   font-size: 1.2em;
   text-overflow: ellipsis;
 }
 
 .fgpa .av-save-dialog md-input-container .av-hint,
-.fgpa .av-preview-dialog md-input-container .av-hint {
+.fgpa .av-preview-dialog md-input-container .av-hint,
+.fgpa .av-extent-dialog md-input-container .av-hint {
   position: relative;
   left: 2px;
   right: auto;
@@ -27978,7 +28005,8 @@ This should make it easy to update my third-party stylesheets to more current ve
 }
 
 .fgpa .av-save-dialog,
-.fgpa .av-preview-dialog {
+.fgpa .av-preview-dialog,
+.fgpa .av-extent-dialog {
   button-float: right;
 }
 
@@ -28609,6 +28637,12 @@ This should make it easy to update my third-party stylesheets to more current ve
   border-radius: 0;
 }
 
+.fgpa .av-extent-dialog {
+  height: 80%;
+  width: 80%;
+  border-radius: 0;
+}
+
 .fgpa .av-title {
   padding: 0 15px 0 15px;
 }
@@ -28653,7 +28687,7 @@ This should make it easy to update my third-party stylesheets to more current ve
 }
 
 .fgpa .av-accordion-icon {
-  top: -32px;
+  top: -28px;
   position: relative;
   cursor: pointer;
 }
@@ -28665,13 +28699,21 @@ This should make it easy to update my third-party stylesheets to more current ve
   list-style-type: none;
 }
 
-.fgpa .list-group-item > div {
-  display: flex;
+.fgpa .av-drag-handle {
+  cursor: move;
+  display: inline-block !important;
 }
 
-.fgpa .av-drag-handle {
-  padding-top: 1px;
-  cursor: move;
+.fgpa .av-drag-handle > md-icon {
+  display: inline-block !important;
+}
+
+.fgpa .av-expcol-all {
+  float: right;
+}
+
+.fgpa .av-accordion-all-field > button {
+  top: -55px;
 }
 
 .fgpa .av-loading-screen {
@@ -28846,4 +28888,46 @@ This should make it easy to update my third-party stylesheets to more current ve
 
 .fgpa legend {
   margin-bottom: 3px;
+  font-size: 18px;
+}
+
+.fgpa .list-group-item {
+  padding: 0px 10px;
+}
+
+.fgpa fieldset {
+  padding: 0px 10px;
+}
+
+.fgpa .has-feedback label ~ .form-control-feedback {
+  right: 10px;
+}
+
+.fgpa .schema-form-array > label {
+  font-size: 18px;
+  line-height: 2.5;
+}
+
+.fgpa _:-ms-input-placeholder,
+.fgpa .av-drag-handle {
+  position: relative;
+  top: 22px;
+}
+
+.fgpa _:-ms-input-placeholder,
+.fgpa .av-accordion-icon {
+  top: 22px;
+  position: relative;
+}
+
+@supports (-ms-ime-align: auto) {
+  .fgpa .av-accordion-icon {
+    top: 22px;
+    position: relative;
+  }
+
+  .fgpa .av-drag-handle {
+    position: relative;
+    top: 22px;
+  }
 }
