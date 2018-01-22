@@ -28717,10 +28717,6 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
   float: right;
 }
 
-.fgpa .av-accordion-all-field > button {
-  top: -55px;
-}
-
 .fgpa .av-legend-text > textarea {
   height: 500px;
 }
