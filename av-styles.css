@@ -28671,6 +28671,41 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
   display: flex;
 }
 
+.fgpa .av-version {
+  text-align: center;
+  margin: 36px 12px 12px 12px;
+}
+
+.fgpa .av-version-number {
+  font-weight: bold;
+  display: block;
+}
+
+.fgpa .av-version-hash {
+  margin-left: 3px;
+  font-weight: normal;
+  font-size: smaller;
+}
+
+.fgpa .av-version-timestamp {
+  font-size: smaller;
+}
+
+.fgpa .av-version-github {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.fgpa .av-version-github > a {
+  display: flex;
+  align-items: center;
+}
+
+.fgpa .av-version-github > a md-icon {
+  margin-right: 4px;
+}
+
 .fgpa .av-main-tab {
   margin: 0 10px 0 10px;
 }
