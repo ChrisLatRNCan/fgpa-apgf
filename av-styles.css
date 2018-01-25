@@ -28671,6 +28671,14 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
   display: flex;
 }
 
+.fgpa .av-summary-adv {
+  font-style: italic;
+}
+
+.fgpa .av-summary-list {
+  color: blue;
+}
+
 .fgpa .av-version {
   text-align: center;
   margin: 36px 12px 12px 12px;
