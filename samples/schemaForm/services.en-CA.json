@@ -155,7 +155,7 @@
               "title": "Is customizable",
               "help": ""
             },
-            "titleValue": {
+            "value": {
               "type": "string",
               "description": "Value to appear by default",
               "title": "Value",
@@ -289,13 +289,13 @@
                 "title": "Is customizable",
                 "help": ""
               },
-              "footnoteValue": {
-                "type": "string",
-                "description": "Value to appear by default",
-                "title": "Value",
-                "help": "",
-                "default": ""
-              }
+            "value": {
+              "type": "string",
+              "description": "Value to appear by default",
+              "title": "",
+              "help": "",
+              "default": ""
+            }
           },
           "additionalProperties": false,
           "title": "Footnote",
