@@ -37,6 +37,18 @@
               "ymax": 3482193,
               "ymin": -883440
             },
+            "full": {
+              "xmax": 0,
+              "xmin": 0,
+              "ymax": 0,
+              "ymin": 0
+            },
+            "maximum": {
+              "xmax": 0,
+              "xmin": 0,
+              "ymax": 0,
+              "ymin": 0
+            },
             "spatialReference": {
               "wkid": 3978
             }
@@ -48,6 +60,18 @@
               "xmin": -16632697.354854,
               "ymax": 10015875.184845109,
               "ymin": 5022907.964742964
+            },
+            "full": {
+              "xmax": 0,
+              "xmin": 0,
+              "ymax": 0,
+              "ymin": 0
+            },
+            "maximum": {
+              "xmax": 0,
+              "xmin": 0,
+              "ymax": 0,
+              "ymin": 0
             },
             "spatialReference": {
               "wkid": 102100,
@@ -549,11 +573,19 @@
             "provinces": "https://geogratis.gc.ca/services/geoname/en/codes/province.json",
             "types": "https://geogratis.gc.ca/services/geoname/en/codes/concise.json"
           }
+        },
+        "export": {
+          "title": {
+            "value": "This is a FGP demo"
+          },
+          "footnote": {
+            "value": "This is a footnote for FGP demo"
+          }
         }
     },
     "ui": {
         "sideMenu": {
-                "items": [["layers","basemap"],["fullscreen","export","share","touch","help","about"],["language"],["plugins"]]
-            }
+          "items": [["layers","basemap"],["fullscreen","export","share","touch","help","about"],["language"],["plugins"]]
+        }
     }
 }

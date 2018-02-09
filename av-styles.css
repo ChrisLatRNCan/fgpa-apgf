@@ -28643,11 +28643,16 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
   border-radius: 0;
 }
 
-.fgpa .av-title {
-  padding: 0 15px 0 15px;
+.fgpa .av-header {
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-.fgpa .av-savename {
+.fgpa .av-header .av-templates {
+  width: 250px;
+}
+
+.fgpa .av-header .av-savename {
   display: inline-block;
   margin-left: 50px;
 }
