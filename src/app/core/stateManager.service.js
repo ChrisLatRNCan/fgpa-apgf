@@ -104,13 +104,16 @@ function stateManager($timeout, $translate, events, constants, commonService) {
         setMasterValidity(_state[modelName]);
 
         // UNDEFINED SECTION
-        // Undefined parameters
-        let modKeys = [modelName];
-        let modUndef = [];
-        searchUndefined(modKeys, model, modUndef);
-
-        // Update validity based on undefined
-        updateValidity(_state[modelName], modelName, modUndef)
+        // Undefined and empty string parameters
+        // Used only for extents and lods of the map section
+        if (modelName === 'map') {
+            let modKeys = [modelName];
+            let modUndef = [];
+            searchUndefined(modKeys, model, modUndef);
+    
+            // Update validity based on undefined
+            updateValidity(_state[modelName], modelName, modUndef)
+        }
 
         // ADVANCE SECTION
         // Advance parameters
@@ -191,7 +194,7 @@ function stateManager($timeout, $translate, events, constants, commonService) {
     }
 
     /**
-     * List undefined attributes
+     * List undefined attributes (undefined or empty string)
      * @function  searchUndefined
      * @private
      * @param {Array}   modelKeys the model name path
@@ -202,7 +205,7 @@ function stateManager($timeout, $translate, events, constants, commonService) {
 
         const dataType = commonService.whatsThat(model);
 
-        if (dataType === 'undefined') {
+        if (dataType === 'undefined' || (dataType === 'string' && model === '')) {
             modelKeys.shift();
             arrKeys.push([modelKeys, false]);
         } else if(dataType !== 'null') {
