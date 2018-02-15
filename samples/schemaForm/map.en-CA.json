@@ -1079,7 +1079,11 @@
                                   "additionalProperties": false
                                 }
                             },
-                             "minItems": 1
+                             "minItems": 1,
+                             "required": [
+                                 "index",
+                                 "id"
+                             ]
                         }
                     }
                 },
