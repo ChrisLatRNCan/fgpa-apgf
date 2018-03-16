@@ -27637,6 +27637,10 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
   z-index: 0;
 }
 
+.fgpa .av-accordion-content-help {
+  margin-bottom: 50px;
+}
+
 .fgpa .av-tools {
   display: flex;
 }
@@ -27665,16 +27669,20 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
 }
 
 .fgpa .av-save-dialog md-input-container input,
+.fgpa .av-error-dialog md-input-container input,
 .fgpa .av-lods-dialog md-input-container input,
 .fgpa .av-preview-dialog md-input-container input,
+.fgpa .av-help-dialog md-input-container input,
 .fgpa .av-extent-dialog md-input-container input {
   font-size: 1.2em;
   text-overflow: ellipsis;
 }
 
 .fgpa .av-save-dialog md-input-container .av-hint,
+.fgpa .av-error-dialog md-input-container .av-hint,
 .fgpa .av-lods-dialog md-input-container .av-hint,
 .fgpa .av-preview-dialog md-input-container .av-hint,
+.fgpa .av-help-dialog md-input-container .av-hint,
 .fgpa .av-extent-dialog md-input-container .av-hint {
   position: relative;
   left: 2px;
@@ -27687,11 +27695,22 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
   float: right;
 }
 
-.fgpa .av-save-dialog,
-.fgpa .av-lods-dialog,
-.fgpa .av-preview-dialog,
-.fgpa .av-extent-dialog {
-  button-float: right;
+.fgpa .av-save-dialog .av-error,
+.fgpa .av-error-dialog .av-error,
+.fgpa .av-lods-dialog .av-error,
+.fgpa .av-preview-dialog .av-error,
+.fgpa .av-help-dialog .av-error,
+.fgpa .av-extent-dialog .av-error {
+  color: #e74c3c;
+}
+
+.fgpa .av-save-dialog button,
+.fgpa .av-error-dialog button,
+.fgpa .av-lods-dialog button,
+.fgpa .av-preview-dialog button,
+.fgpa .av-help-dialog button,
+.fgpa .av-extent-dialog button {
+  float: right;
 }
 
 .fgpa .md-icon-button {
@@ -28309,19 +28328,50 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
   margin-bottom: 0;
 }
 
+.fgpa .av-hide {
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+.fgpa .av-hide-animate {
+  display: inherit;
+  opacity: 1;
+  transition: opacity 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+}
+
+.fgpa .av-scrollbar-measure {
+  width: 100px;
+  height: 100px;
+  overflow: scroll;
+  position: absolute;
+  top: -9990px;
+}
+
 .fgpa .av-save-dialog {
-  height: 250px;
+  height: 230px;
   width: 600px;
   border-radius: 0;
 }
 
+.fgpa .av-error-dialog {
+  height: 180px;
+  width: 800px;
+  border-radius: 0;
+}
+
 .fgpa .av-lods-dialog {
-  height: 250px;
+  height: 230px;
   width: 800px;
   border-radius: 0;
 }
 
 .fgpa .av-preview-dialog {
+  height: 80%;
+  width: 80%;
+  border-radius: 0;
+}
+
+.fgpa .av-help-dialog {
   height: 80%;
   width: 80%;
   border-radius: 0;
@@ -28347,70 +28397,224 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
   margin-left: 50px;
 }
 
-.fgpa .av-summary {
-  border: 1px solid black;
-  padding: 0 15px 0 15px;
-  margin: 0 15px 0 15px;
+.fgpa av-help-overlay {
+  position: absolute;
+  z-index: 999;
 }
 
-.fgpa .av-summary ul {
-  list-style-type: none;
+.fgpa av-help-overlay div[av-name] {
+  position: absolute;
 }
 
-.fgpa .av-summary-icon {
-  max-height: 20px;
-  max-width: 20px;
+.fgpa .av-help-summary {
+  height: 80%;
+  width: 70%;
+  border-radius: 0;
 }
 
-.fgpa .av-summary-item {
-  display: flex;
+.av-small.fgpa .av-help-summary {
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  max-height: 100%;
 }
 
-.fgpa .av-summary-adv {
-  font-style: italic;
+.fgpa .av-help-summary .av-help-list {
+  padding: 0;
+  list-style: none;
 }
 
-.fgpa .av-summary-list {
-  color: #4d90fe;
+.fgpa .av-help-summary .av-help-list > li:last-child .av-help-list {
+  border-bottom: none;
 }
 
-.fgpa .av-summary-bad {
-  color: #e74c3c;
+.fgpa .av-help-summary .av-help-list table {
+  margin-bottom: 15px;
 }
 
-.fgpa .av-version {
-  text-align: center;
-  margin: 36px 12px 12px 12px;
+.fgpa .av-help-summary .av-help-list td,
+.fgpa .av-help-summary .av-help-list th {
+  padding: 0 5px;
 }
 
-.fgpa .av-version-number {
-  font-weight: bold;
-  display: block;
+.fgpa .av-help-summary .av-content,
+.fgpa .av-help-summary .av-subsection {
+  padding: 8px 0;
 }
 
-.fgpa .av-version-hash {
-  margin-left: 3px;
-  font-weight: normal;
-  font-size: smaller;
+.fgpa .av-help-summary .av-help-content {
+  padding: 8px 24px 24px 24px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.fgpa .av-version-timestamp {
-  font-size: smaller;
+.fgpa .av-help-summary .av-help-header {
+  height: 60px;
+  padding-right: 14px;
+  padding-left: 14px;
 }
 
-.fgpa .av-version-github {
-  display: flex;
-  justify-content: center;
-  margin-top: 5px;
+.fgpa .av-help-summary .av-help-header .av-toggled.md-toggle-icon {
+  transform: rotate(180deg) !important;
 }
 
-.fgpa .av-version-github > a {
+.fgpa .av-help-summary .av-help-header:hover ~ .av-help-content:not(.ng-hide) ~ .av-shadow {
+  background-color: #607D8B;
+}
+
+.fgpa .av-help-summary .av-help-highlight {
+  background-color: #607D8B;
+  color: #FFFFFF;
+}
+
+.fgpa .av-clearable-input input::-ms-clear {
+  display: none;
+}
+
+.fgpa .av-clearable-input button.av-clear-button {
+  position: absolute;
+  right: 0;
+}
+
+.fgpa .av-clearable-input button.av-clear-button.av-button-32 {
+  top: calc(50% - 16px);
+}
+
+.fgpa .av-clearable-input button.av-clear-button.av-button-24 {
+  top: calc(50% - 12px);
+}
+
+.fgpa .av-clearable-input button.av-clear-button.av-button-20 {
+  top: calc(50% - 10px);
+}
+
+.fgpa .av-clearable-input button.av-clear-button.av-button-16 {
+  top: calc(50% - 8px);
+}
+
+.fgpa .av-clearable-input button.av-clear-button.av-button-14 {
+  top: calc(50% - 7px);
+}
+
+.fgpa .av-no-message-input .md-errors-spacer {
+  display: none;
+}
+
+.fgpa av-help-search {
   display: flex;
   align-items: center;
 }
 
-.fgpa .av-version-github > a md-icon {
-  margin-right: 4px;
+.fgpa av-help-search md-input-container {
+  margin: 0;
+}
+
+.fgpa av-help-search md-input-container input::-ms-clear {
+  display: none;
+}
+
+.fgpa av-help-search md-input-container .av-clear-search {
+  position: absolute;
+  right: 0;
+}
+
+.fgpa av-help-search md-input-container .av-clear-search.av-button-32 {
+  top: calc(50% - 16px);
+}
+
+.fgpa av-help-search md-input-container .av-clear-search.av-button-24 {
+  top: calc(50% - 12px);
+}
+
+.fgpa av-help-search md-input-container .av-clear-search.av-button-20 {
+  top: calc(50% - 10px);
+}
+
+.fgpa av-help-search md-input-container .av-clear-search.av-button-16 {
+  top: calc(50% - 8px);
+}
+
+.fgpa av-help-search md-input-container .av-clear-search.av-button-14 {
+  top: calc(50% - 7px);
+}
+
+.fgpa av-help-search md-input-container .md-errors-spacer {
+  display: none;
+}
+
+.fgpa av-help-search md-icon {
+  margin-right: 6px;
+  min-width: 0;
+  min-height: 0;
+}
+
+.fgpa .av-transform-default {
+  transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+}
+
+.fgpa .av-rotate-0 {
+  transform: rotate(0deg);
+}
+
+.fgpa .av-rotate-30 {
+  transform: rotate(30deg);
+}
+
+.fgpa .av-rotate-60 {
+  transform: rotate(60deg);
+}
+
+.fgpa .av-rotate-90 {
+  transform: rotate(90deg);
+}
+
+.fgpa .av-rotate-120 {
+  transform: rotate(120deg);
+}
+
+.fgpa .av-rotate-150 {
+  transform: rotate(150deg);
+}
+
+.fgpa .av-rotate-180 {
+  transform: rotate(180deg);
+}
+
+.fgpa .av-rotate--30 {
+  transform: rotate(-30deg);
+}
+
+.fgpa .av-rotate--60 {
+  transform: rotate(-60deg);
+}
+
+.fgpa .av-rotate--90 {
+  transform: rotate(-90deg);
+}
+
+.fgpa .av-rotate--120 {
+  transform: rotate(-120deg);
+}
+
+.fgpa .av-rotate--150 {
+  transform: rotate(-150deg);
+}
+
+.fgpa .av-rotate--180 {
+  transform: rotate(-180deg);
+}
+
+.fgpa .av-spinning {
+  animation: spinloop 1.7s linear infinite;
+}
+
+@keyframes spinloop {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .fgpa .av-main-tab {
@@ -28488,6 +28692,23 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
 
 .fgpa .av-lods-error {
   color: #e74c3c;
+}
+
+.fgpa .av-accordion-custom div {
+  border-bottom: 1px solid #B6B6B6;
+  border-left: 1px solid #B6B6B6;
+  border-right: 1px solid #B6B6B6;
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.fgpa .av-accordion-custom legend {
+  color: #727272;
+  font-style: italic;
+}
+
+.fgpa .av-legend-link {
+  margin-bottom: 20px;
 }
 
 .fgpa .av-loading-screen {
@@ -28586,74 +28807,91 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
   animation: spinloop 1.7s linear infinite;
 }
 
-.fgpa .av-transform-default {
-  transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+.fgpa .av-summary {
+  border: 1px solid black;
+  padding: 0 15px 0 15px;
+  margin: 0 15px 0 15px;
 }
 
-.fgpa .av-rotate-0 {
-  transform: rotate(0deg);
+.fgpa .av-summary ul {
+  list-style-type: none;
 }
 
-.fgpa .av-rotate-30 {
-  transform: rotate(30deg);
+.fgpa .av-summary-icon {
+  max-height: 20px;
+  max-width: 20px;
 }
 
-.fgpa .av-rotate-60 {
-  transform: rotate(60deg);
+.fgpa .av-summary-item {
+  display: flex;
 }
 
-.fgpa .av-rotate-90 {
-  transform: rotate(90deg);
+.fgpa .av-summary-adv {
+  font-style: italic;
 }
 
-.fgpa .av-rotate-120 {
-  transform: rotate(120deg);
+.fgpa .av-summary-list {
+  color: #4d90fe;
 }
 
-.fgpa .av-rotate-150 {
-  transform: rotate(150deg);
+.fgpa .av-summary-bad {
+  color: #e74c3c;
 }
 
-.fgpa .av-rotate-180 {
-  transform: rotate(180deg);
+.fgpa .av-version {
+  text-align: center;
+  margin: 36px 12px 12px 12px;
 }
 
-.fgpa .av-rotate--30 {
-  transform: rotate(-30deg);
+.fgpa .av-version-number {
+  font-weight: bold;
+  display: block;
 }
 
-.fgpa .av-rotate--60 {
-  transform: rotate(-60deg);
+.fgpa .av-version-hash {
+  margin-left: 3px;
+  font-weight: normal;
+  font-size: smaller;
 }
 
-.fgpa .av-rotate--90 {
-  transform: rotate(-90deg);
+.fgpa .av-version-timestamp {
+  font-size: smaller;
 }
 
-.fgpa .av-rotate--120 {
-  transform: rotate(-120deg);
+.fgpa .av-version-github {
+  display: flex;
+  justify-content: center;
+  margin-top: 5px;
 }
 
-.fgpa .av-rotate--150 {
-  transform: rotate(-150deg);
+.fgpa .av-version-github > a {
+  display: flex;
+  align-items: center;
 }
 
-.fgpa .av-rotate--180 {
-  transform: rotate(-180deg);
+.fgpa .av-version-github > a md-icon {
+  margin-right: 4px;
 }
 
-.fgpa .av-spinning {
-  animation: spinloop 1.7s linear infinite;
+.fgpa md-input-container.rv-table-search {
+  display: flex;
+  align-items: center;
 }
 
-@keyframes spinloop {
-  0% {
-    transform: rotate(0deg);
-  }
+.fgpa md-input-container.rv-table-search input::-ms-clear {
+  display: none;
+}
 
-  100% {
-    transform: rotate(360deg);
-  }
+.rv-keyboard.fgpa md-dialog:focus {
+  outline: 2px solid #4d90fe;
+}
+
+.fgpa md-tooltip .rv-hide {
+  display: none;
+}
+
+.fgpa md-select-value {
+  width: 1px;
 }
 
 .fgpa .tab-content {
