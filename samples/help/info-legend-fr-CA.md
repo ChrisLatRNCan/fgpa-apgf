@@ -13,9 +13,9 @@ Le légende structurée vous permet de personnaliser la légende pour modifier l
 
 Lorsque vous choisissez le type légende _structurée_, une nouvelle section apparaît sous le menu déroulant. Cette section contient trois parties qui peuvent être utilisées afin de personnaliser la légende:
 
-1. [**Édition manuelle**](##Éditionmanuelle)
-2. [**Validation**](##Validation)
-3. [**Édition automatique**](##Éditionautomatique)
+1. **Édition manuelle**
+2. **Validation**
+3. **Édition automatique**
 
 ![Structured Legend](./help/images/structLegendSectionsFR.png)
 
@@ -29,13 +29,13 @@ Appuyer le bouton _VALIDER JSON_ exécutera un valideur JSON sur le contenu de l
 
 ## 3. Édition automatique
 
-Cette section contient cinq boutons qui peuvent être utilisés pour ajouter des objets JSON dans la fenêtre [d'édition](##Éditionmanuelle).
+Cette section contient cinq boutons qui peuvent être utilisés pour ajouter des objets JSON dans la fenêtre d'édition.
 
-* [ENTRÉE](##ENTRÉE)
-* [GROUPE](##GROUPE)
-* [INFORMATION](##INFORMATION)
-* [COUCHE NON LIÉE](##COUCHENONLIÉE)
-* [GROUPE VISIBILITÉ](##GROUPEVISIBILITÉ)
+* ENTRÉE
+* GROUPE
+* INFORMATION
+* COUCHE NON LIÉE
+* GROUPE VISIBILITÉ
 
 ### ENTRÉE
 

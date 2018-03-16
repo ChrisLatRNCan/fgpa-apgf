@@ -13,9 +13,9 @@ The structured legend let you customize the legend to change the order, the grou
 
 When you choose _Structured_ legend type a new section appears at the bottom of the drop down menu. This section contains three main parts that can be used to edit and validate a customized legend:
 
-1. [**Manual edition**](##Manualedition)
-2. [**Validation**](##Validation)
-3. [**Automatic edition**](##Automaticedition)
+1. Manual edition
+2. Validation
+3. Automatic edition
 
 ![Structured Legend](./help/images/structLegendSections.png)
 
@@ -25,18 +25,18 @@ This section contains a text editor in which Legend JSON object can be edited ma
 
 ## 2. Validation
 
-Pushing the _VALIDATE JSON_ button will run a JSON validator over the content of the [editor window](##Manualedition). If no error is found, this message will be displayed: ![Validation message](./help/images/messLegendValidation.png). However, if the validator identified errors, a message will be shown
+Pushing the _VALIDATE JSON_ button will run a JSON validator over the content of the editor window. If no error is found, this message will be displayed: ![Validation message](./help/images/messLegendValidation.png). However, if the validator identified errors, a message will be shown
 ( e.g. ![Error message](./help/images/messLegendErrorValidation.png) ).
 
 ## 3. Automatic edition
 
-This section contains 5 buttons that can be used to add JSON object to the [editor window](##Manualedition) content.
+This section contains 5 buttons that can be used to add JSON object to the editor window content.
 
-* [ENTRY](##ENTRY)
-* [ENTRY GROUP](##ENTRYGROUP)
-* [INFO SECTION](##INFOSECTION)
-* [UNBOUND LAYER](##UNBOUNDLAYER)
-* [VISIBILITY SET](##VISIBILITYSET)
+* ENTRY
+* ENTRY GROUP
+* INFO SECTION
+* UNBOUND LAYER
+* VISIBILITY SET
 
 ### ENTRY
 
