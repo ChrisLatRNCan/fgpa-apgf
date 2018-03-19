@@ -8,7 +8,9 @@ Il y a deux types de légende
 
 La légende Automatique prendra les couches comme elle apparaissent dans la section _Couches_ et créera une légende par défaut.
 
-Le légende structurée vous permet de personnaliser la légende pour modifier l'ordre, le regroupement, ajouter une description ainsi que de nombreux autres paramètres. Ci-dessous, vous trouverez des informations sur toutes les différentes personnalisations. **IMPORTANT** - _Pour le moment, la légende structurée n'est pas validée selon le schéma du visualiseur de la PGF. Ainsi des problèmes lors du chargement pourraient survenir. Ceux-ci, peuvent être causés par des erreurs dans les valeurs (ex: mauvais ID), des attributs obligatoires manquants ou des erreurs dans la structure de la légende._-
+Le légende structurée vous permet de personnaliser la légende pour modifier l'ordre, le regroupement, ajouter une description ainsi que de nombreux autres paramètres. Ci-dessous, vous trouverez des informations sur toutes les différentes personnalisations.
+
+**IMPORTANT** - _Pour le moment, la légende structurée n'est pas validée selon le schéma du visualiseur de la PGF. Ainsi des problèmes lors du chargement pourraient survenir. Ceux-ci, peuvent être causés par des erreurs dans les valeurs (ex: mauvais ID), des attributs obligatoires manquants ou des erreurs dans la structure de la légende._-
 
 ### Légende structurée
 

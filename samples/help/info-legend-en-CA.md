@@ -7,7 +7,9 @@ There is two types of legend
 
 The autopopulate legend will take the layers as they appear in the _Layers_ section and create a default legend.
 
-The structured legend let you customize the legend to change the order, the grouping, add description and many other settings. Below, you can find information on all the different customization. **IMPORTANT** - _For the time being, the structured legend is not validated against the FGP viewer schema, so loading problems can happen at preview time. This could be caused by errors in value (eg: bad ID), missing required attributes or errors in the legend structure._-
+The structured legend let you customize the legend to change the order, the grouping, add description and many other settings. Below, you can find information on all the different customization.
+
+**IMPORTANT** - _For the time being, the structured legend is not validated against the FGP viewer schema, so loading problems can happen at preview time. This could be caused by errors in value (eg: bad ID), missing required attributes or errors in the legend structure._-
 
 ### Structured legend
 
