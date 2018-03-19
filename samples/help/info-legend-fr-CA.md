@@ -2,14 +2,15 @@
 ##### Informations détaillées concernant la section _Légende_
 
 Il y a deux types de légende
+
 * Automatique
 * structurée
 
 La légende Automatique prendra les couches comme elle apparaissent dans la section _Couches_ et créera une légende par défaut.
 
-Le légende structurée vous permet de personnaliser la légende pour modifier l'ordre, le regroupement, ajouter une description ainsi que de nombreux autres paramètres. Ci-dessous, vous trouverez des informations sur toutes les différentes personnalisations.
+Le légende structurée vous permet de personnaliser la légende pour modifier l'ordre, le regroupement, ajouter une description ainsi que de nombreux autres paramètres. Ci-dessous, vous trouverez des informations sur toutes les différentes personnalisations. **IMPORTANT** - _Pour le moment, la légende structurée n'est pas validée selon le schéma du visualiseur de la PGF. Ainsi des problèmes lors du chargement pourraient survenir. Ceux-ci, peuvent être causés par des erreurs dans les valeurs (ex: mauvais ID), des attributs obligatoires manquants ou des erreurs dans la structure de la légende._-
 
-# Légende structurée
+### Légende structurée
 
 Lorsque vous choisissez le type légende _structurée_, une nouvelle section apparaît sous le menu déroulant. Cette section contient trois parties qui peuvent être utilisées afin de personnaliser la légende:
 
@@ -19,15 +20,15 @@ Lorsque vous choisissez le type légende _structurée_, une nouvelle section app
 
 ![Structured Legend](./help/images/structLegendSectionsFR.png)
 
-## 1. Édition manuelle
+#### 1. Édition manuelle
 
 Cette section contient un éditeur de texte où les objets JSON de la légende peuvent être édités manuellement. Le contenu doit respecter les [spécifications de l'ébauche 4 de l'hyper schéma JSON](http://json-schema.org/specification-links.html#draft-4).
 
-## 2. Validation
+#### 2. Validation
 
 Appuyer le bouton _VALIDER JSON_ exécutera un valideur JSON sur le contenu de la fenêtre d'édition. Si aucune erreur n'est trouvée, le message suivant sera affiché: ![Validation message](./help/images/messLegendValidationFR.png). Cependant, si le valideur identifie une erreur, le message suivant sera affiché: ( e.g. ![Error message](./help/images/messLegendErrorValidation.png) ).
 
-## 3. Édition automatique
+#### 3. Édition automatique
 
 Cette section contient cinq boutons qui peuvent être utilisés pour ajouter des objets JSON dans la fenêtre d'édition.
 
@@ -37,7 +38,7 @@ Cette section contient cinq boutons qui peuvent être utilisés pour ajouter des
 * COUCHE NON LIÉE
 * GROUPE VISIBILITÉ
 
-### ENTRÉE
+##### ENTRÉE
 
 Une entrée de base dans la légende correspondant à une couche.
 
@@ -48,11 +49,12 @@ Une entrée de base dans la légende correspondant à une couche.
       "layerId": "crops"
     }
 ```
+
 > **Interface**
 
 ![Legend entry](./help/images/legendEntry.png)
 
-### GROUPE
+##### GROUPE
 
 Un groupe peut contenir: des groupes, des entrées, des groupes de visibilité, des zones d'information et des couches non liées. Un groupe prend la forme d'un tableau dans le fichier de configuration.
 
@@ -83,7 +85,7 @@ Un groupe peut contenir: des groupes, des entrées, des groupes de visibilité, 
 
 ![Group entry](./help/images/legendEntryGroup.png)
 
-### INFORMATION
+##### INFORMATION
 
 La section d'information peut être de type texte (_text_), titre (_title_), image (_image_) ou couche non liée (_unbound layer_).
 
@@ -119,7 +121,7 @@ La section d'information peut être de type texte (_text_), titre (_title_), ima
 
 ![Info section](./help/images/legendInfoSection.gif)
 
-### COUCHE NON LIÉE
+##### COUCHE NON LIÉE
 
 Une objet contenant un ensemble de symbologies (_symbology stack_). un ensemble de symbologies est un tableau d'images (_images_) ou d'icônes (_icon_).
 
@@ -163,7 +165,7 @@ Une objet contenant un ensemble de symbologies (_symbology stack_). un ensemble 
 
 ![Unbound Layer](./help/images/legendUnboundLayer.gif)
 
-### GROUPE VISIBILITÉ
+##### GROUPE VISIBILITÉ
 
 Un groupe de visibilité est un groupe d'entrées et/ou d'autres groupes de visibilité qui sont mutuellement exclusifs c-à-d. qu'un seul item peut être visible à la fois. Un bouton radio sera affiché.
 
@@ -186,4 +188,3 @@ Un groupe de visibilité est un groupe d'entrées et/ou d'autres groupes de visi
 > **Interface**
 
 ![Visibility set](./help/images/legendVisibilitySet.png)
-

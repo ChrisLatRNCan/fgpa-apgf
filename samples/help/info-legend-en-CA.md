@@ -7,9 +7,9 @@ There is two types of legend
 
 The autopopulate legend will take the layers as they appear in the _Layers_ section and create a default legend.
 
-The structured legend let you customize the legend to change the order, the grouping, add description and many other settings. Below, you can find information on all the different customization.
+The structured legend let you customize the legend to change the order, the grouping, add description and many other settings. Below, you can find information on all the different customization. **IMPORTANT** - _For the time being, the structured legend is not validated against the FGP viewer schema, so loading problems can happen at preview time. This could be caused by errors in value (eg: bad ID), missing required attributes or errors in the legend structure._-
 
-# Structured legend
+### Structured legend
 
 When you choose _Structured_ legend type a new section appears at the bottom of the drop down menu. This section contains three main parts that can be used to edit and validate a customized legend:
 
@@ -19,16 +19,16 @@ When you choose _Structured_ legend type a new section appears at the bottom of 
 
 ![Structured Legend](./help/images/structLegendSections.png)
 
-## 1. Manual edition
+#### 1. Manual edition
 
 This section contains a text editor in which Legend JSON object can be edited manually. The content should respect the [JSON schema draft-4 specifications](http://json-schema.org/specification-links.html#draft-4).
 
-## 2. Validation
+#### 2. Validation
 
 Pushing the _VALIDATE JSON_ button will run a JSON validator over the content of the editor window. If no error is found, this message will be displayed: ![Validation message](./help/images/messLegendValidation.png). However, if the validator identified errors, a message will be shown
 ( e.g. ![Error message](./help/images/messLegendErrorValidation.png) ).
 
-## 3. Automatic edition
+#### 3. Automatic edition
 
 This section contains 5 buttons that can be used to add JSON object to the editor window content.
 
@@ -38,7 +38,7 @@ This section contains 5 buttons that can be used to add JSON object to the edito
 * UNBOUND LAYER
 * VISIBILITY SET
 
-### ENTRY
+##### ENTRY
 
 This is a basic legend entry that corresponds to a layer.
 
@@ -49,11 +49,12 @@ This is a basic legend entry that corresponds to a layer.
       "layerId": "crops"
     }
 ```
+
 > **Interface**
 
 ![Legend entry](./help/images/legendEntry.png)
 
-### ENTRY GROUP
+##### ENTRY GROUP
 
 A group can contains: groups, entries, visibility sets, info sections et unbound layer. It takes the form of an array in the configuration file.
 
@@ -84,7 +85,7 @@ A group can contains: groups, entries, visibility sets, info sections et unbound
 
 ![Group entry](./help/images/legendEntryGroup.png)
 
-### INFO SECTION
+##### INFO SECTION
 
 Info section can be of type _text_, _title_, _image_ or _unbound layer_.
 
@@ -120,7 +121,7 @@ Info section can be of type _text_, _title_, _image_ or _unbound layer_.
 
 ![Info section](./help/images/legendInfoSection.gif)
 
-### UNBOUND LAYER
+##### UNBOUND LAYER
 
 This is an entry containing a symbology stack. A symbology stack is an array of images or icons.
 
@@ -164,7 +165,7 @@ This is an entry containing a symbology stack. A symbology stack is an array of 
 
 ![Unbound Layer](./help/images/legendUnboundLayer.gif)
 
-### VISIBILITY SET
+##### VISIBILITY SET
 
 A visibility set is a group of entries and/or entry groups that are mutually exclusive e.g. only one item could be shown at a time. A radio button control will be displayed.
 
