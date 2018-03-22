@@ -28710,6 +28710,14 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
   margin-bottom: 20px;
 }
 
+.fgpa #activeForm-legend-root {
+  white-space: pre-wrap;
+}
+
+.fgpa .av-legend-cursorpos {
+  float: right;
+}
+
 .fgpa .av-loading-screen {
   overflow-x: hidden;
   position: absolute;
