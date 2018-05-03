@@ -27639,6 +27639,11 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
 
 .fgpa .av-accordion-content-help {
   margin-bottom: 50px;
+  font-size: 15px;
+}
+
+.fgpa .av-accordion-content-help blockquote {
+  font-size: 15px;
 }
 
 .fgpa .av-tools {
@@ -28396,6 +28401,10 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
   margin-left: 50px;
 }
 
+.fgpa .av-header .av-languages {
+  width: 120px;
+}
+
 .fgpa av-help-overlay {
   position: absolute;
   z-index: 999;
@@ -28427,6 +28436,17 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
   border-bottom: none;
 }
 
+.fgpa .av-help-summary .av-help-list p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.fgpa .av-help-summary .av-help-list h5 {
+  font-size: 18px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
 .fgpa .av-help-summary .av-help-list table {
   margin-bottom: 15px;
 }
@@ -28434,6 +28454,11 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
 .fgpa .av-help-summary .av-help-list td,
 .fgpa .av-help-summary .av-help-list th {
   padding: 0 5px;
+}
+
+.fgpa .av-help-summary .av-help-list blockquote {
+  padding: 2px 15px;
+  border-left: 5px solid #607D8B;
 }
 
 .fgpa .av-help-summary .av-content,
@@ -28689,6 +28714,11 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
   color: #266A2E;
 }
 
+.fgpa .av-legend-link {
+  text-decoration: underline;
+  color: #607D8B;
+}
+
 .fgpa .av-lods-error {
   color: #e74c3c;
 }
@@ -28925,6 +28955,10 @@ The fix is based on the following hack: https://codepen.io/mkstix6/pen/pRbErK
 .fgpa .schema-form-array > label {
   font-size: 18px;
   line-height: 2.5;
+}
+
+.fgpa .col-xs-2 {
+  min-width: 150px;
 }
 
 .fgpa _:-ms-input-placeholder,
