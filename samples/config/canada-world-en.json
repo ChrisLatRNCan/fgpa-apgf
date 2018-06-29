@@ -258,17 +258,17 @@
             "description": "This Canadian basemap provides geographic context with bilingual labels and an emphasis on transportation networks.  From Natural Resources Canada.",
             "thumbnailUrl": "",
             "altText": "Transport with labels",
-            "layers": [{
-                "id": "CBMT",
-                "layerType": "esriFeature",
-                "url": "https://geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBMT3978/MapServer",
-                "opacity": 1
-            },
+            "layers": [
             {
                 "id": "CBME_CBCE_HS_RO_3978",
                 "layerType": "esriFeature",
                 "url": "https://geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBME_CBCE_HS_RO_3978/MapServer",
-                "opacity": 0.7
+                "opacity": 1
+            }, {
+                "id": "CBMT",
+                "layerType": "esriFeature",
+                "url": "https://geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBMT3978/MapServer",
+                "opacity": 0.75
             }],
             "tileSchemaId": "cad53536",
             "attribution": {
@@ -285,16 +285,15 @@
             "description": "This Canadian basemap provides geographic context with an emphasis on transportation networks and without labels.  From Natural Resources Canada.",
             "altText": "Transport without labels",
             "layers": [{
-                "id": "CBMT_CBCT_GEOM_3978",
-                "layerType": "esriFeature",
-                "url": "https://geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBMT_CBCT_GEOM_3978/MapServer",
-                "opacity": 1
-            },
-            {
                 "id": "CBME_CBCE_HS_RO_3978",
                 "layerType": "esriFeature",
                 "url": "https://geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBME_CBCE_HS_RO_3978/MapServer",
-                "opacity": 0.7
+                "opacity": 1
+            }, {
+                "id": "CBMT_CBCT_GEOM_3978",
+                "layerType": "esriFeature",
+                "url": "https://geoappext.nrcan.gc.ca/arcgis/rest/services/BaseMaps/CBMT_CBCT_GEOM_3978/MapServer",
+                "opacity": 0.75
             }],
             "tileSchemaId": "cad53536",
             "attribution": {
