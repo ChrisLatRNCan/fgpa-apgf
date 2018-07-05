@@ -494,7 +494,8 @@
                       "required": [
                         "id",
                         "layerType",
-                        "url"
+                        "url",
+                        "opacity"
                       ]
                     },
                     "minItems": 1,
