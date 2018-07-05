@@ -485,6 +485,8 @@
                             "title": "Opacité",
                             "version": "2.4",
                             "default": 1,
+                            "minimum": "0",
+                            "maximum": "1",
                             "description": "Opacité initiale"
                         }
                       },
